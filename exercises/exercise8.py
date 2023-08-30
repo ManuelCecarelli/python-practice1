@@ -1,6 +1,5 @@
 """Diccionarios"""
 
-
 """
 Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
 - Clave "Nombre", valor de tipo string: "Mario Pedernera"
@@ -10,7 +9,12 @@ Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
 """
 
 # COMPLETAR - INICIO
-
+Cliente = {
+    "Nombre": "Mario Pedernera",
+    "DNI": 56895632,
+    "Domicilio": "Los alamos 4509",
+    "Compras": ["cafetera", "TV 50 pulgadas", "mouse gamer"],
+}
 # COMPLETAR - FIN
 
 assert (
@@ -20,7 +24,6 @@ assert (
     and (Cliente["Compras"] == ["cafetera", "TV 50 pulgadas", "mouse gamer"])
 )
 
-
 """
 Definir un diccionario para las 'Compras' que contenga los siguiente valores:
 - Clave "Mario Pedernera", valor de tipo lista: ["cafetera", "TV 50 pulgadas", "mouse gamer"]
@@ -29,7 +32,11 @@ Definir un diccionario para las 'Compras' que contenga los siguiente valores:
 """
 
 # COMPLETAR - INICIO
-
+Compras = {
+    "Mario Pedernera": ["cafetera", "TV 50 pulgads", "mouse gamer"],
+    "Ezequiel Castello": ["ipad", "ipod", "iphone"],
+    "Pablo Piristrelli": ["Reproductor de CD", "Videograbadora"],
+}
 # COMPLETAR - FIN
 
 assert (
@@ -37,7 +44,6 @@ assert (
     and (Compras["Ezequiel Castello"] == ["ipad", "ipod", "iphone"])
     and (Compras["Pablo Piristrelli"] == ["Reproductor de CD", "Videograbadora"])
 )
-
 
 """
 Dado el siguiente diccionario obtener el valor de la "clave1" utilizando el metodo get y
@@ -52,11 +58,10 @@ diccionario = {
 }
 
 # COMPLETAR - INICIO
-
+clave1 = diccionario.get("clave1")
 # COMPLETAR - FIN
 
 assert clave1 == 234
-
 
 """
 Dado el siguiente diccionario forzar la obtención de un valor por defecto igual a 5 utilizando
@@ -72,11 +77,10 @@ diccionario_2 = {
 }
 
 # COMPLETAR - INICIO
-
+clave5 = diccionario_2.get("clave5",5)
 # COMPLETAR - FIN
 
 assert clave5 == 5
-
 
 """
 Dado el siguiente diccionario obtener una lista de todas sus claves por medio del método keys
@@ -90,11 +94,10 @@ diccionario_3 = {
 }
 
 # COMPLETAR - INICIO
-
+keys = list(diccionario_3.keys())
 # COMPLETAR - FIN
 
 assert keys == ["clave1", "clave2", "clave3", "clave4"]
-
 
 """
 Dado el siguiente diccionario obtener una lista de todas sus valores por medio del método values
@@ -108,11 +111,10 @@ diccionario_4 = {
 }
 
 # COMPLETAR - INICIO
-
+values = list(diccionario_4.values())
 # COMPLETAR - FIN
 
 assert values == [1234, 4567, 8910, 1112]
-
 
 """
 Dado el siguiente diccionario obtener una lista de sus claves y sus valores uno a continuación
@@ -127,11 +129,10 @@ diccionario_5 = {
 }
 
 # COMPLETAR - INICIO
-
+items = list(diccionario_5.items())
 # COMPLETAR - FIN
 
 assert items == [(1, 1111), (2, 2222), (3, 3333), (4, 4444)]
-
 
 """
 Dados dos diccionarios actualizar el primero con los valores del segundo utilizando el método update
@@ -152,7 +153,7 @@ diccionario_7 = {
 }
 
 # COMPLETAR - INICIO
-
+diccionario_6.update(diccionario_7)
 # COMPLETAR - FIN
 
 assert diccionario_6 == {1: 1111, 2: 2223, 3: 3334, 4: 4444, 5: 5555, 6: 6666}
